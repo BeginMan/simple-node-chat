@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div id="content">
+    <div id="room"></div>
+    <div id="room-list"></div>
+    <div id="messages"></div>
+
+    <form action="" id="send-form">
+        <input type="text" id="send-message">
+        <input type="submit" id="send-button" value="Send">
+    </form>
+    <div id="help">
+        命令:
+        <ul>
+            <li>更改昵称: <code>/nick [username]</code></li>
+            <li>创建或加入房间: <code>/join [root name]</code></li>
+        </ul>
+    </div>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+<script src="js/chat.js"></script>
+<script src="js/chat_ui.js"></script>
+
+</body>
+</html>
