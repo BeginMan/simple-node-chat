@@ -5,6 +5,8 @@ var channel = new events.EventEmitter();
 channel.clients = {};
 channel.subs = {};
 
+// 设置监听器数量100,默认11个
+channel.setMaxListeners(100);
 
 channel.on('join', function (id, client) {
     // 加入成员后显示当前在线人数
